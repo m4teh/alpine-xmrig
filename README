@@ -1,0 +1,7 @@
+Very simple xmrig miner build using Alpine.
+
+docker run --restart unless-stopped --name alpine-xmrig -d --read-only -m 1G xmrig \
+   --coin monero -o xmr-au1.nanopool.org:14433 -k -t 2 \
+   --donate-level=1 --tls --cpu-priority 0 -u 46gr6DZH7j1dqxX31C791CaPnmdxKdafRSu8EK9t18iSPymRt7DKQZuQQaJWv7U5miiEjADyAj2M24k6ds1muR6TJXLgM7J
+   
+   Dockerfile includes openssl-dev and hwloc-dev
