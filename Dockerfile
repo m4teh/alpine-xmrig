@@ -17,6 +17,7 @@ RUN   apk --no-cache upgrade && \
         build-base \
         cmake \
         git
+COPY sysctl.conf /etc/sysctl.conf
 USER miner
 WORKDIR    /xmrig
 ENTRYPOINT  ["./xmrig"]
